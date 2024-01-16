@@ -3,7 +3,7 @@ apply plugin: 'maven-publish' // Apply this plugin at the top of your library bu
  //Set env variable GPR_USER & GPR_API_KEY if not adding a properties file
 
 def getVersionName = { ->
-    return "1.0.2" // Replace with version Name
+    return "main" // Replace with version Name
 }
 
 def getArtificatId = { ->
@@ -13,7 +13,6 @@ def getArtificatId = { ->
 publishing {
     publications {
         bar(MavenPublication) {
-            groupId 'com.enefce.libraries' // Replace with group ID
             artifactId getArtificatId()
             version getVersionName()
             artifact("$buildDir/outputs/aar/mylibrary1-release.aar")

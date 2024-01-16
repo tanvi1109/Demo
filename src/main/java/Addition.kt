@@ -1,4 +1,3 @@
-import android.util.Log
 
 class Addition {
     fun add(){
